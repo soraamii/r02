@@ -1,10 +1,51 @@
-import BasicLayout from "../../layouts/BasicLayout";
+import { useSearchParams } from "react-router-dom";
+import ListComponent from "../../components/board/ListComponent";
+
+
+const checkNull = (obj) => {
+
+  const result = {}
+
+  for (const attr in obj) {
+    const attrName = attr
+    const attrValue = obj[attr]
+
+    if( attrValue && attrValue !== 'null'){
+      result[attrName] = attrValue
+    }
+  }
+
+  return result
+}
+
 
 const ListPage = () => {
+
+  const [search, setSearch] = useSearchParams() // useSearchParams: 쿼리스트링에 접근할 수 있게 해주는 훅
+
+  console.log(search)
+  
+  const page = search.get("page") || 1
+  const size = search.get("size") || 10
+  const type = search.get("type")
+  const keyword = search.get("keyword")
+
+  const queryObj = checkNull({page,size,type,keyword})
+
+  console.log("queryObj --------")
+  console.log(queryObj)
+
+  const movePage = (num) => {
+    console.log("NUM ------------" + num)
+    queryObj.page = num
+    setSearch({...queryObj})
+  }
+
   return ( 
-    <BasicLayout>
+    <div>
       Board List Page
-    </BasicLayout>
+      <ListComponent queryObj={queryObj} movePage = {movePage} ></ListComponent>
+    </div>
    );
 }
  
