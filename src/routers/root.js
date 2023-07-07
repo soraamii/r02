@@ -10,6 +10,7 @@ import LoadingPage from "../pages/LoadingPage";
 const Loading = <LoadingPage></LoadingPage>
 const Board_Index = lazy(() => import(("../pages/board/IndexPage")))
 const Board_List = lazy(() => import(("../pages/board/ListPage")))
+const Board_Read = lazy(() => import(("../pages/board/ReadPage")))
 
 
 // 진짜 라우터
@@ -29,8 +30,12 @@ const router = createBrowserRouter([
     element: <Suspense fallback={Loading}><Board_Index/></Suspense>,
     children: [
       {
-      path: "list",
-      element: <Suspense fallback={Loading}><Board_List/></Suspense>
+        path: "list",
+        element: <Suspense fallback={Loading}><Board_List/></Suspense>
+      },
+      {
+        path: "read/:bno",
+        element: <Suspense fallback={Loading}><Board_Read/></Suspense>
       }
     ]
   }
