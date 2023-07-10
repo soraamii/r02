@@ -24,24 +24,30 @@ const ReadComponent = ({bno}) => {
   },[bno])
 
   return ( 
-    <div>
-      <div>
+    <div className="m-1 border-b-2">
+      <div className="p-1 text-[#707070]">
+        <span className="font-semibold text-[#418613]">No </span> 
         {board.bno}
       </div>
-      <div>
+      <div className="p-1 text-[#707070]">
+        <span className="font-semibold text-[#418613]">TITLE </span>
         {board.title}
       </div>
-      <div>
+      <div className="p-1 text-[#707070]">
+        <span className="font-semibold text-[#418613]">CONTENT </span> 
         {board.content}
       </div>
-      <div>
+      <div className="p-1 text-[#707070]">
+        <span className="font-semibold text-[#418613]">WRITER </span> 
         {board.writer}
       </div>
-      <div>
-        {board.regDate}
+      <div className="p-1 text-[#707070]">
+        <span className="font-semibold text-[#418613]">DATE </span> 
+       {board.regDate}
       </div>
-      <div>
-        {board.modDate}
+      <div className="p-1 text-[#707070]">
+      <span className="font-semibold text-[#418613]">UPDATE </span>  
+       {board.modDate}
       </div>
 
     </div>

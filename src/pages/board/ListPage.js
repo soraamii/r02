@@ -32,7 +32,7 @@ const ListPage = () => {
 
   return ( 
     <div>
-      Board List Page
+      <div className="p-2 text-2xl text-[#418613] font-bold border-b-2 text-center">Board List</div>
       <ListSearchComponent queryObj={queryObj} moveSearch={moveSearch}></ListSearchComponent>
       <ListComponent 
         queryObj={queryObj} 

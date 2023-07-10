@@ -23,9 +23,9 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
 
 
   return ( 
-    <div className="m-4 p-4 flex bg-pink-200 border-2">
+    <div className=" p-2 flex bg-white border-b-2 justify-end">
       
-      <select className="border-1 m-2 p-2" 
+      <select className="border-2 m-2 p-2" 
       value={searchObj.type}
       onChange={e => {
         searchObj.type = e.target.value
@@ -40,7 +40,7 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
         <option value={'tcw'}>제목내용작성자</option>
       </select>
 
-      <input type="text" className="border-1 m-2 p-2"
+      <input type="text" className="border-2 m-2 p-2"
       value={searchObj.keyword}
       onChange={e => {
         searchObj.keyword = e.target.value
@@ -48,7 +48,7 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
       }}
       ></input>
 
-      <button className="m-2 p-2 border-2"
+      <button className="m-2 p-2 border-2 text-white font-extabold bg-[#418613] hover:bg-green-900 rounded-lg"
       onClick={e => moveSearch(searchObj.type, searchObj.keyword)}
       >SEARCH</button>
     </div>

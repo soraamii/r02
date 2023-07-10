@@ -6,7 +6,8 @@ const MainPage = () => {
   console.log("Main");
   return ( 
     <BasicLayout>
-      Main Page
+      <div className="bg-main h-[90vh] bg-cover bg-no-repeat">
+      </div>
     </BasicLayout>
    );
 }

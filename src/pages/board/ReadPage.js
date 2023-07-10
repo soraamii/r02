@@ -13,10 +13,14 @@ const ReadPage = () => {
 
   return ( 
     <div>
-      Board Read Page
+      <div className="font-bold text-2xl text-[#418613]">READ</div>
       <ReadComponent bno={bno}></ReadComponent>
       <ReplyWrapper bno={bno}></ReplyWrapper>
-      <button onClick={e => moveList()}>List</button>
+      <button 
+        className="m-1 p-2 border-2 text-white font-extabold bg-[#418613] hover:bg-green-900 rounded-lg"
+        onClick={e => moveList()}>
+        List
+      </button>
     </div>
    );
 }

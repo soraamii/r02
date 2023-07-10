@@ -32,12 +32,14 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
 
 
   return ( 
-    <div>
-      <div>ListComponent</div>
+    <div className="p-3">
+      <div className="m-1 font-bold text-xl text-[#418613]">LIST</div>
       <div>
         <ul>
           {listData.dtoList.map(({bno, title, writer, replyCount}) => 
-            <li key={bno}
+            <li
+            className="p-1 underline text-[707070#] hover:bg-gray-100 border-b-2" 
+            key={bno}
             onClick={() => moveRead(bno)}
             >{bno} {title} {writer} [{replyCount}]</li>)}
         </ul>

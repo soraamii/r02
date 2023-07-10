@@ -14,7 +14,7 @@ const initState = {
   reuqestDTO: null
 }
 
-const ReplyList = ({bno, page, last, movePage}) => {
+const ReplyList = ({bno, page, last, movePage, refresh, changeCurrent}) => {
   
   const [listData, setListData] = useState(initState)
 
@@ -30,16 +30,21 @@ const ReplyList = ({bno, page, last, movePage}) => {
 
     })
 
-  },[bno,page,last])
+  },[bno,page,last,refresh])
   
   return ( 
-    <div>
-      <div>
-        Reply List
+    <div className="m-4 border-2">
+      <div className="m-1 font-bold text-xl text-[#418613]">
+        REPLY
       </div>
       <div>
         <ul>
-          {listData.dtoList.map( reply => <li key={reply.rno}>{reply.rno} {reply.replyText} </li>)}
+          {listData.dtoList.map( reply => 
+          <li 
+          className="p-1 underline text-[#707070]  hover:bg-gray-100 border-b-2" 
+          key={reply.rno}
+          onClick={() => changeCurrent(reply.rno)}
+          >{reply.rno} {reply.replyText} </li>)}
         </ul>
         <ListPageComponent {...listData} movePage={movePage}></ListPageComponent>
       </div>

@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 const SampleNav = () => {
   return ( 
-    <div className="flex m-6 p-4 text-white font-extrabold">
-      <div className="m-4 text-4xl border-2">
-        <Link to="/">Main</Link>
+    <div className="flex p-2 text-[#418613] font-extrabold border-b-2">
+      <div className="m-4 text-3xl">
+        <Link to="/">MAIN</Link>
       </div>
-      <div className="m-4 text-4xl border-2">
-      <Link to="/about">About</Link>
+      <div className="m-4 text-3xl">
+      <Link to="/about">ABOUT</Link>
       </div>
-      <div className="m-4 text-4xl border-2">
-      <Link to="/board/list">Board</Link>
+      <div className="m-4 text-3xl">
+      <Link to="/board/list">BOARD</Link>
       </div>
     </div>
    );
