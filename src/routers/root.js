@@ -18,6 +18,8 @@ const Products_Register = lazy(() => import(("../pages/products/RegisterPage")))
 const Products_Read = lazy(() => import(("../pages/products/ReadPage")))
 const Products_Modify = lazy(() => import(("../pages/products/ModifyPage")))
 
+const Member_login = lazy(() => import(("../pages/member/LoginPage")))
+
 
 // 진짜 라우터
 const router = createBrowserRouter([
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
     element: <AboutPage></AboutPage>
   }
   ,
+  {
+    path:"member/login",
+    element: <Suspense fallback={Loading}><Member_login/></Suspense>,
+  },
   {
     path:"board",
     element: <Suspense fallback={Loading}><Board_Index/></Suspense>,

@@ -37,21 +37,21 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
         <ul className="flex flex-wrap container justify-center">
           {listData.dtoList.map((dto) => 
             <li
-            className="w-2/5 h-auto m-2 p-1 text-[707070#] hover:bg-gray-100 border-b-2 rounded-md shadow-lg" 
+            className="font-['Noto Sans KR'] w-2/5 h-auto m-2 p-1 text-[707070#] hover:bg-gray-100 border-b-2 rounded-md shadow-lg" 
             key={dto.pno}
             onClick={() => moveRead(dto.pno)}
             >
               <div>
-                <div className="text-[#418613] font-extrabold" >
+                <div className="text-[#418613]" >
                   {dto.pno}
                 </div>
                 <div className="flex justify-center items-center">
                 <img src={`http://localhost/s_${dto.fname}`}></img>
                 </div>
-                <div className="text-center text-2xl">
+                <div className="text-center">
                   {dto.pname} 
                 </div>
-                <div className="text-center text-2xl">
+                <div className="text-center">
                   \ {dto.price}
                 </div>
                 <div className="flex justify-end">

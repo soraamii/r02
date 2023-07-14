@@ -1,3 +1,4 @@
+import TodoList from "../components/todo/TodoList";
 import BasicLayout from "../layouts/BasicLayout";
 
 
@@ -8,6 +9,7 @@ const MainPage = () => {
     <BasicLayout>
       <div className="bg-main h-[90vh] bg-cover bg-no-repeat">
       </div>
+      <TodoList></TodoList>
     </BasicLayout>
    );
 }

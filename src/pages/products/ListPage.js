@@ -12,8 +12,8 @@ const ListPage = () => {
   }
 
   return ( 
-    <div className="text-2xl text-[#418613] font-extrabold">
-      PRODUCTS LIST
+    <div>
+      <div className="text-[#418613] text-xl font-semibold">PRODUCTS LIST</div>
       <ListComponent
         queryObj={queryObj} 
         movePage = {movePage} 
